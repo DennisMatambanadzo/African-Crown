@@ -105,132 +105,137 @@ select {
     }
 }
 
-a {
-    text-decoration: none;
-    color: wheat;
-    /* font-weight: var(--fw-3); */
-}
-
-li {
+*{
     list-style: none;
-
+    text-decoration: none;
 }
 
-.navigation {
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
     display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 40px 16%;
+}
+
+.logo{
+    font-size: 36px;
+    color: var(--clr-brown-1);
+    font-weight: 600;
+    font-family: var(--ff-3);
+    display: inline-block;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    margin-left: 40px;
+    font-weight: 500;
     font-family: var(--ff-1);
-    font-size: large;
-    font-weight: var(--fw-1);
-    justify-content: space-between;
-    margin: 1rem;
-    /* background-color: aliceblue; */
+    color: var(--clr-brown-2);
 }
 
-.nav-menu {
-    display: flex;
-    gap: 3rem;
-    /* background-color: green; */
-    margin-right: 3rem;
-    justify-content: space-between;
-
+.navlist a:hover{
+    color: var(--clr-orange-1);
+    text-shadow: 3px 3px 20px var(--clr-orange-1), -2px 1px 30px var(--clr-orange-2);
 }
 
-.nav-link:hover {
-    color: var(--clr-brown-3);
-    transition: .4s;
-}
-
-.logo {
-    /* background-color: red; */
-    height: fit-content;
-}
-
-.logo img {
-    width: 4rem;
-    border-radius: 2rem;
-}
-
-.hamburger {
+#menu-icon{
+    font-size: 35px;
+    z-index: 10001;
     cursor: pointer;
     display: none;
 }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--clr-brown-1);
-    margin-top: 5px;
-    display: block;
+section{
+    padding: 110px 16% 90px;
+   
 }
 
-@media (max-width:768px) {
-
-    .nav-menu {
-        position: relative;
-        left: -100%;
-        z-index: 2;
-        flex-direction: column;
-        top: 5rem;
-        transition: .3s ease;
-        margin: auto;
-        background: var(--clr-beige-3);
-        max-width: 75v;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .brand {
-        position: relative;
-        background-color: yellow;
-        height: fit-content;
-        justify-items: center;
-    }
-
-    .hamburger {
-        display: block;
-        position: relative;
-        transition: .3s ease;
-        top: 1rem;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
-.hero {
-    font-family: var(--ff-2);
+.hero{
     position: relative;
-    top: 5rem;
-    border-radius: .5rem;
-
-}
-.hero-content{
-    display: grid;
-    grid-template-columns: 1fr 1fr; font-weight: var(--fw-4);
-    margin: 1rem;
+    top: 40vh;
+    height: 70vh;
+    width: 100%;
+    background-image: url(images/ben-masora-8hLjTQCNbNY-unsplash.jpg);
+    background-position: top right;
+    background-size: cover;
+    display: flex;
     align-items: center;
+    justify-content: flex-start;
+    backdrop-filter: blur(5px);
 }
-.hero-btn{
+.main-content h4{
+    font-family: var(--ff-2);
+    font-size: 3rem;
+    color: var(--clr-beige-2);
+    font-weight: normal;
+    backdrop-filter: blur(.6px);
+}
+.main-content p{
+    font-size: 2rem;
+    font-weight: 700;
     font-family: var(--ff-3);
-    font-weight: 400;
-    text-transform: uppercase;
-    background-color: var(--clr-beige-1);
-    border: 1px solid var(--clr-brown-1);
-
+    color: var(--clr-beige-4);
+    backdrop-filter: blur(.6px);
+    margin-bottom: 15px;
+    line-height: 30px;
 }
-.hero-btn:hover{
+
+.social{
+    margin-bottom: 40px;
+}
+
+.social i{
+    display: inline-flex;
+    align-items: center;
+    width: 40;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--clr-beige-2);
+    border-radius: 50%;
+    backdrop-filter: brightness(88%);
+    font-size: 20px;
+    margin-right: 17px;
+    box-shadow: 0 0 20px transparent;
     cursor: pointer;
+}
+.social i:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 20px var(--clr-beige-4);
+}
+
+.btn{
+    font-family: var(--ff-3);
+    font-weight: 700;
+    display: inline-block;
+    padding: 11px 26px;
+    background-color: var(--clr-orange-4);
+    color: var(--clr-beige-4);
+    border-radius: 8px;
+    border: 2px solid var(--clr-brown-1);
+    font-size: 15px;
+}
+
+.btn:hover{
+    background: var(--clr-brown-4);
+    /* color: var(--clr-orange-3); */
+    transform: scale(.95);
+}
+
+header.sticky{
     background-color: var(--clr-beige-2);
-    border: 1px solid var(--clr-beige-1);
+    padding: 16px 16%;
+    margin-bottom: 30px;
+    box-shadow: 0 0.1rem 1rem rgba(0,0,0, .2);
+}
+.about{
+    position: relative;
+    top: 30vh;
 }

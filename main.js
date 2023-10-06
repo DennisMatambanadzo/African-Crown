@@ -1,14 +1,5 @@
-const productGallery = [{
+const header = document.querySelector("header");
 
-},
-{
-    
-}]
-
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburger.classList.toggle("active");
-});
+window.addEventListener("scroll", ()=>{
+  header.classList.toggle("sticky", window.scrollY > 120);
+})
