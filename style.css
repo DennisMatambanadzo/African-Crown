@@ -170,8 +170,8 @@ section {
 .hero {
     position: relative;
     z-index: 1;
-    top: 30vh;
-    height: 70vh;
+    top: 20vh;
+    height: 30vh;
     width: 100%;
     background-image: url(images/ben-masora-8hLjTQCNbNY-unsplash.jpg);
     background-position: top right;
@@ -378,6 +378,9 @@ form .send-btn:hover {
 }
 
 .footer{
+    /* position: fixed;
+    bottom: 0;
+    height: 5vh; */
     padding: 22px 16%;
     background: var(--clr-beige-1);
     display: flex;
@@ -402,6 +405,21 @@ form .send-btn:hover {
     border-radius: 50%;
     color: var(--clr-brown-2);
     font-size: 27px;
+}
+
+.products{
+    position: relative;
+    top: 10vh;
+    background: var(--clr-brown-2);
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2.3rem;
+}
+.product img{
+    width: 30lvw;
 }
 
 @media (max-width:1380px) {
