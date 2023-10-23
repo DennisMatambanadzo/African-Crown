@@ -136,7 +136,7 @@ header {
 
 .navlist {
     display: flex;
-   
+
 }
 
 .navlist a {
@@ -157,7 +157,7 @@ header {
     z-index: 10001;
     cursor: pointer;
     display: none;
-    
+
 }
 
 section {
@@ -171,7 +171,7 @@ section {
     position: relative;
     z-index: 1;
     top: 20vh;
-    height: 30vh;
+    height: 75vh;
     width: 100%;
     background-image: url(images/ben-masora-8hLjTQCNbNY-unsplash.jpg);
     background-position: top right;
@@ -286,7 +286,7 @@ header.sticky {
     border-radius: 28px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--clr-beige-3);
-    cursor: pointer; 
+    cursor: pointer;
     transition: var(--transition);
 }
 
@@ -308,7 +308,7 @@ header.sticky {
     padding: 7px 0;
     color: var(--clr-beige-4);
     border-bottom: 2px solid var(--clr-brown-3);
-   
+
 }
 
 .box i {
@@ -377,7 +377,7 @@ form .send-btn:hover {
     cursor: pointer;
 }
 
-.footer{
+.footer {
     /* position: fixed;
     bottom: 0;
     height: 5vh; */
@@ -407,19 +407,21 @@ form .send-btn:hover {
     font-size: 27px;
 }
 
-.products{
+.products {
     position: relative;
-    top: 10vh;
+    top: 20vh;
     background: var(--clr-brown-2);
 }
-.product-container{
+
+.product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items: center;
     gap: 2.3rem;
 }
-.product img{
-    width: 30lvw;
+
+.product img {
+    width: 30vw;
 }
 
 @media (max-width:1380px) {
@@ -446,6 +448,14 @@ form .send-btn:hover {
     .hero {
         height: 90vh;
         background-position: center;
+    }
+
+    .products {
+        padding-top: 2rem;
+    }
+
+    .center-text {
+        margin-bottom: 5rem;
     }
 }
 
@@ -488,20 +498,30 @@ form .send-btn:hover {
         --p-font: 15px;
     }
 
+    .product {
+        margin: auto;
+    }
+
+    .product img {
+        width: 60vw;
+    }
+
 }
 
 @media (max-width:1290px) {
     :root {
-        --h1-font: 3.5rem;   
+        --h1-font: 3.5rem;
     }
-    .social{
+
+    .social {
         margin-bottom: 20px;
     }
 
-    #menu-icon{
+    #menu-icon {
         display: block;
     }
-    .navlist{
+
+    .navlist {
         position: absolute;
         top: 100%;
         right: -100%;
@@ -509,27 +529,43 @@ form .send-btn:hover {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        background:var(--clr-beige-1);
+        background: var(--clr-beige-1);
         transition: var(--transition);
     }
-    .navlist a{
+
+    .navlist a {
         display: block;
         padding: 17px;
         font-size: 22px;
     }
-    .navlist.active{
+
+    .navlist.active {
         right: 0;
     }
 }
 
-@media (max-width: 680px){
-    .main-content p{
+@media (max-width: 680px) {
+    .main-content p {
         width: 100%;
     }
 
+
+
+    .product-info {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 .6rem;
+        font-size: 1.2rem;
+        font-family: var(--ff-1);
+        color: var(--clr-orange-3);
+    }
+
+    .product-info a {
+        color: black;
+    }
 }
 
-@media (max-width: 470px){
+@media (max-width: 470px) {
     .about-img img {
         text-align: center;
         width: 100%;
