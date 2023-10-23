@@ -1,14 +1,18 @@
-const productGallery = [{
+const header = document.querySelector("header");
 
-},
-{
-    
-}]
+window.addEventListener("scroll", ()=>{
+  header.classList.toggle("sticky", window.scrollY > 50);
+})
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+let menu = document.querySelector("#menu-icon");
+let navlist = document.querySelector(".navlist");
 
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburger.classList.toggle("active");
-});
+menu.onclick = () =>{
+    menu.classList.toggle('bx-x');
+    navlist.classList.toggle('active');
+}
+
+window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navlist.classList.remove('active');
+}
