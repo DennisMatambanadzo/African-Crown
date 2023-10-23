@@ -423,6 +423,18 @@ form .send-btn:hover {
 .product img {
     width: 30vw;
 }
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0 .6rem; */
+    font-size: 1.2rem;
+    font-family: var(--ff-1);
+    color: var(--clr-orange-3);
+}
+
+.product-info a {
+    color: black;
+}
 
 @media (max-width:1380px) {
     header {
@@ -551,18 +563,7 @@ form .send-btn:hover {
 
 
 
-    .product-info {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 .6rem;
-        font-size: 1.2rem;
-        font-family: var(--ff-1);
-        color: var(--clr-orange-3);
-    }
-
-    .product-info a {
-        color: black;
-    }
+    
 }
 
 @media (max-width: 470px) {
