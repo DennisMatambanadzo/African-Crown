@@ -407,13 +407,13 @@ form .send-btn:hover {
     font-size: 27px;
 }
 
-.products {
+.box-list {
     position: relative;
     top: 20vh;
     background: var(--clr-brown-2);
 }
 
-.product-container {
+.box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items: center;
@@ -432,8 +432,9 @@ form .send-btn:hover {
     color: var(--clr-orange-3);
 }
 
-.product-info a {
+.item-title {
     color: black;
+    font-family: var(--ff-3);
 }
 
 @media (max-width:1380px) {
