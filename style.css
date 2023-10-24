@@ -542,6 +542,11 @@ form .send-btn:hover {
     .product img {
         width: 60vw;
     }
+    .blog img{
+        width: 50vw;
+        justify-content: center;
+        margin: .7rem auto;
+    }
 
 }
 
@@ -579,11 +584,7 @@ form .send-btn:hover {
     .navlist.active {
         right: 0;
     }
-    .blog img{
-        width: 50vw;
-        justify-content: center;
-        margin: .7rem auto;
-    }
+   
 }
 
 @media (max-width: 680px) {
