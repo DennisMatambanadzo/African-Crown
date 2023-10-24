@@ -410,7 +410,7 @@ form .send-btn:hover {
 .box-list {
     position: relative;
     top: 20vh;
-    background: var(--clr-brown-2);
+    background: var(--clr-orange-4);
 }
 
 .box-container {
@@ -431,11 +431,35 @@ form .send-btn:hover {
     font-family: var(--ff-1);
     color: var(--clr-orange-3);
 }
+/* .blog{
+    background: green;
+    justify-items: center;
+} */
+.blog img{
+    width: 15vw;
+    justify-content: center;
+    margin: .7rem auto;
+}
+.blog-info{
+    text-align: center;
+}
 
 .item-title {
     color: black;
     font-family: var(--ff-3);
+    font-weight: 800;
 }
+
+.grid-column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+.grid-column img{
+    width:40vw;
+}
+
+
 
 @media (max-width:1380px) {
     header {
@@ -554,6 +578,11 @@ form .send-btn:hover {
 
     .navlist.active {
         right: 0;
+    }
+    .blog img{
+        width: 50vw;
+        justify-content: center;
+        margin: .7rem auto;
     }
 }
 
